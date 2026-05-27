@@ -1,0 +1,89 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 16px;
+    min-height: 0;
+    padding: 2px 2px;
+}
+
+
+#workspaces button.active {
+    color: #fdf6e3;
+    background-color: #4c566a;
+    border-bottom: 3px solid #8abeb7;
+}
+
+#separator {
+	color: #4c566a
+}
+
+#clock{
+	color: #8abeb7;
+	padding-left: 2px
+}
+
+#temperature.critical {
+	color: #f38ba8; 
+}
+
+#window{
+	color: #81a1c1;
+	font-weight: bold
+}
+
+#battery.normal {
+	color:  #ffffff; 
+}
+
+
+
+#battery.crit:not(.charging) {
+   animation-name: redPulse;
+   animation-duration: 0.8s;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+
+#battery {
+	color: #a3be8c;
+}
+
+#battery.charging {
+	
+	/* Pulse Animation */
+    animation-name: greenPulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+	color: #81a1c1;
+}
+
+@keyframes redPulse {
+    from {
+        color: #f38ba8; /* Standard Red */
+        text-shadow: none;
+    }
+    to {
+        color: #ff0000; /* Bright Red */
+        text-shadow: 0 0 8px rgba(255, 0, 0, 0.7); /* Red Glow */
+    }
+}
+
+@keyframes greenPulse {
+    from {
+        /* Start with normal brightness */
+        color: #a3be8c;
+        text-shadow: none;
+    }
+    to {
+        /* Pulse to a brighter glow */
+        color: #ebcb8b; /* Slight shift to a warm yellow-green */
+        text-shadow: 0 0 5px rgba(166, 227, 161, 0.8);
+    }
+}

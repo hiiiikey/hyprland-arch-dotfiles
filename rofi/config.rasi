@@ -1,0 +1,93 @@
+configuration {
+  modes: "window,run,drun,combi,keys,filebrowser,emoji";
+  dpi: 156;
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "JetBrainsMono Nerd Font Mono Medium 9.5";
+  modi: "window,run,drun,combi,keys,filebrowser,emoji";
+  show-icons: true;
+  icon-theme: "Papirus-Dark";
+  terminal: "alacritty";
+}
+
+@theme "/dev/null"
+
+// for nordic theme replace with the following:
+  //
+  // bg:#002B36;    
+  // bg-alt:#073642;
+  // fg: #eee8D5;
+  // fg-alt: #839496;
+  //
+* {
+  bg: rgba(46,52,64,0.75);  // bg:#2e3440   
+bg-alt: rgba(76,86,106,0.85); //fg:#4c566A
+fg: rgba(255,255,255,1) ;  //fg:#FFFFFF
+fg-alt: rgba(120,124,121,1); //fg:#787c79
+ background-color: @bg;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  border: 3 ;
+  border-radius: 15px;
+  border-color: @fg-alt;
+  width: 650px;
+  height: 450px;}
+
+element {
+  background-color: transparent;
+  padding: 8 0;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
+  background-color: inherit;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 12;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  padding: 8 12;
+  background-color: transparent;
+  columns: 1;
+  lines: 8;
+}
+
+mainbox {
+  // background-color: black;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @fg;
+}
+
+/* vim: ft=sass
+
