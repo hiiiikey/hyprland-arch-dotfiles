@@ -5,7 +5,7 @@
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {
-		
+
 		gaps_in          = 10,
 		gaps_out         = 20,
 
@@ -21,9 +21,9 @@ hl.config({
 
 		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
 		allow_tearing    = false,
-		resize_corner = 3,
+		resize_corner    = 3,
 
-		
+
 
 	},
 
@@ -53,7 +53,21 @@ hl.config({
 	animations = {
 		enabled = true,
 	},
+
 })
+
+hl.layer_rule({
+	match = { namespace = "swaync-control-center" },
+	blur = true,
+	ignore_alpha = 0.0,
+})
+
+hl.layer_rule({
+	match = { namespace = "swaync-notification-window" },
+	blur = true,
+	ignore_alpha = 0.0,
+})
+
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
@@ -118,3 +132,4 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 --     border_size = 0,
 --     rounding    = 0,
 -- })
+

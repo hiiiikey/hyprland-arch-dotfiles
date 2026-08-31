@@ -33,11 +33,21 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
+-- hl.bind(mainMod .. " + left", hl.plugin.hy3.change_focus({ direction = "left" }))
+-- hl.bind(mainMod .. " + right", hl.plugin.hy3.change_focus({ direction = "right" }))
+-- hl.bind(mainMod .. " + up", hl.plugin.hy3.change_focus({ direction = "up" }))
+-- hl.bind(mainMod .. " + down", hl.plugin.hy3.change_focus({ direction = "down" }))
+
 -- Move Windows with mainMod + SHIFT + arrow keys
 hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }, { group_aware = true }))
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }, { group_aware = true }))
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }, { group_aware = true }))
 hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }, { group_aware = true }))
+
+-- hl.bind(mainMod .. " + SHIFT + left", hl.plugin.hy3.move_window({ direction = "left" }, { group_aware = true }))
+-- hl.bind(mainMod .. " + SHIFT + right", hl.plugin.hy3.move_window({ direction = "right" }, { group_aware = true }))
+-- hl.bind(mainMod .. " + SHIFT + up", hl.plugin.hy3.move_window({ direction = "up" }, { group_aware = true }))
+-- hl.bind(mainMod .. " + SHIFT + down", hl.plugin.hy3.move_window({ direction = "down" }, { group_aware = true }))
 
 
 -- Switch workspaces with mainMod + [0-9]
@@ -89,7 +99,7 @@ hl.bind(mainMod .. " + F4", hl.dsp.exec_cmd("~/.local/bin/power-script.sh"))
 -- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.local/bin/tlp-switch.sh"))
 hl.bind("CONTROL + SHIFT + ESCAPE", hl.dsp.exec_cmd("alacritty -e btop --no-tty --force-utf"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle", mode = "fullscreen" })) -- Toggle window fullscreen
-
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))                              -- sway panel
 
 -- Window screenshot: save and copy
 hl.bind(mainMod .. "+ PRINT",
@@ -115,6 +125,10 @@ hl.bind("PRINT",
 ]])
 )
 
+-- Custom keybinding for restarting waybar
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd([[killall waybar && waybar &]]))
+
+
 
 ---------------------------------------------------
 -------------------- Manual Layout -----------------
@@ -128,7 +142,8 @@ hl.bind(mainMod .. " + V", hl.dsp.layout("v"))
 hl.bind(mainMod .. " + W", hl.dsp.group.toggle())
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.group.lock_active({ action = "toggle" }))
 
-hl.bind(mainMod .. " + SHIFT + CONTROL + left", hl.dsp.window.move({into_or_create_group = "left"}))
-hl.bind(mainMod .. " + SHIFT + CONTROL + right", hl.dsp.window.move({into_or_create_group = "right"}))
+hl.bind(mainMod .. " + SHIFT + CONTROL + left", hl.dsp.window.move({ into_or_create_group = "left" }))
+hl.bind(mainMod .. " + SHIFT + CONTROL + right", hl.dsp.window.move({ into_or_create_group = "right" }))
 
-hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd([[killall waybar && waybar &]]))
+hl.bind(mainMod .. " + SHIFT + ALT + left", hl.dsp.window.move({ out_of_group = "left" }))
+hl.bind(mainMod .. " + SHIFT + ALT + right", hl.dsp.window.move({ out_of_group = "right" }))

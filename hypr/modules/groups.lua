@@ -2,6 +2,11 @@
 
 hl.config({
     group = {
+        drag_into_group = true,
+        merge_floated_into_tiled_on_groupbar = true,
+        merge_groups_on_drag = true,
+        merge_groups_on_groupbar = true,
+
         col = {
             border_active = { colors = { "rgba(88c0d0ee)", "rgba(a3be8cee)" }, angle = 45 },
 
@@ -14,11 +19,13 @@ hl.config({
             font_family = "JetBrainsMono Nerd Font",
             font_size = 18,
             gradients = true,
-            height = 24,
-            priority = 3,
+            height = 30,
+            -- priority = 3,
             render_titles = true,
             scrolling = true,
-            text_color = "rgb(222222)",
+            text_color = "rgb(ffffff)",
+            gaps_in = 5,
+            gaps_out = 5,
 
             col = {
                 active = "rgb(88c0d0)",

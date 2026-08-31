@@ -2,11 +2,11 @@
 ---- WORKSPACES ----
 ---------------------
 
-hl.workspace_rule({
-	workspace = "1",
-	monitor = "eDP-1",
-	default = true
-})
+-- hl.workspace_rule({
+-- 	workspace = "1",
+-- 	monitor = "eDP-1",
+-- 	default = true
+-- })
 
 ----------------
 ---- WINDOWS ----
@@ -84,7 +84,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "float copyq",
 	match = {
-		title = "CopyQ"
+		class="com.github.hluk.copyq",
 	},
 	float = true
 })
@@ -146,7 +146,7 @@ hl.window_rule({
 		class = "zen",
 	},
 	suppress_event = "maximize",
-	
+
 })
 
 
@@ -242,12 +242,20 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name = "Thunar Rename Dialog",
-    match = {
-        class = "thunar",
-        title = ".*Rename.*"
-    },
-    float = true
+	name = "Thunar Rename Dialog",
+	match = {
+		class = "thunar",
+		title = ".*Rename.*"
+	},
+	float = true
+})
+
+hl.window_rule({
+	name = "ibus language switching popup",
+	match = {
+		class = "ibus-ui-gtk3",
+	},
+	float = true
 })
 
 -- Fix for Xwayland windows like Discord sharing entire screens or wayland windows
@@ -260,9 +268,8 @@ hl.window_rule({
 
 	no_initial_focus = true,
 	no_focus = true,
-    no_anim = true,
-    no_blur = true,
-    max_size = {1, 1},
-    opacity = 0.0,
+	no_anim = true,
+	no_blur = true,
+	max_size = { 1, 1 },
+	opacity = 0.0,
 })
-

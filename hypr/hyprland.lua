@@ -1,4 +1,5 @@
 require("modules.monitors")
+require("modules.manual")
 require("modules.layout")
 require("modules.binds")
 require("modules.autostart")
@@ -15,7 +16,7 @@ require("modules.groups")
 hl.config({
 	misc = {
 		force_default_wallpaper = 0, -- Set to 0 or 1 to disable the anime mascot wallpapers
-		disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+		disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
 	},
 	binds = {
 		allow_workspace_cycles = false,
@@ -61,3 +62,5 @@ hl.config({
 --     border_size = 0,
 --     rounding    = 0,
 -- })
+
+-- hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("hyprlock --immediate"))
