@@ -96,7 +96,7 @@ hl.bind(mainMod .. "+ SHIFT + V", hl.dsp.exec_cmd("copyq show")) -- Show clipboa
 hl.bind(mainMod .. "+ CONTROL + V", hl.dsp.exec_cmd("pavucontrol"))
 hl.bind("XF86Launch7", hl.dsp.exec_cmd("spotify"))
 hl.bind(mainMod .. " + F4", hl.dsp.exec_cmd("~/.local/bin/power-script.sh"))
--- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.local/bin/tlp-switch.sh"))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.local/bin/tlp-switch.sh"))
 hl.bind("CONTROL + SHIFT + ESCAPE", hl.dsp.exec_cmd("alacritty -e btop --no-tty --force-utf"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle", mode = "fullscreen" })) -- Toggle window fullscreen
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))                              -- sway panel

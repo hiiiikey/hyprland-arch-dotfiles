@@ -63,4 +63,4 @@ hl.config({
 --     rounding    = 0,
 -- })
 
--- hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("hyprlock --immediate"))
+hl.bind("switch:off:Lid Switch", hl.dsp.dpms({ action = "enable" }))

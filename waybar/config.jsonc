@@ -168,5 +168,16 @@
 	"hyprland/window": {
 		"max-length": 40,
 		"separate-outputs": true
+	},
+
+	"custom/idle_inhibitor": {
+	"format": "{status} {timeleft}/{timeout}",
+	"format-icons": {
+		"activated": "",
+		"deactivated": ""
+		},
+	"timeout": 480,
+	"dynamic-timeouts": true,
+	"timeout-step": 10
 	}
 }

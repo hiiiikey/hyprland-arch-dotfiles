@@ -2,11 +2,12 @@
 ---- WORKSPACES ----
 ---------------------
 
--- hl.workspace_rule({
--- 	workspace = "1",
--- 	monitor = "eDP-1",
--- 	default = true
--- })
+--hl.workspace_rule({
+--	workspace = "1",
+--	monitor = "desc:AU Optronics 0xF3A7",
+--	default = true
+--})
+
 
 ----------------
 ---- WINDOWS ----
@@ -84,7 +85,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "float copyq",
 	match = {
-		class="com.github.hluk.copyq",
+		class = "com.github.hluk.copyq",
 	},
 	float = true
 })

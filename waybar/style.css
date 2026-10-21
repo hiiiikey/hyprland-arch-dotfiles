@@ -36,7 +36,7 @@
 	color:  #ffffff; 
 }
 
-
+#idle_inhibit {}
 
 #battery.crit:not(.charging) {
    animation-name: redPulse;
